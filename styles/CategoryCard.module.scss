@@ -1,0 +1,91 @@
+$black: #000000;
+$main-font: 'Jost', sans-serif;
+$y-shift: 150px;
+$white: #FFFFFF;
+.card {
+    height: 200px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 1s;  
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: none;
+
+    &__title {
+      font-family: $main-font;
+      font-size: 42px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: $black;
+      margin: 0;
+      transform: translateY($y-shift);
+      transition-duration: 1s;
+      z-index: 1;
+    }
+
+    &__plus {
+      transition-duration: 1s;
+      z-index: 1;
+      transform: translateY($y-shift);
+      opacity: 1;
+      font-family: $main-font;
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: $black;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      align-items: flex-end;
+      &::before {
+        opacity: 0.8;
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        }
+      }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      border-radius: 2rem;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      z-index: 0;
+      transition: 1s;
+    }
+    &:hover {
+      box-shadow: 0 0 0 2px rgba($black, 0.6) inset;
+      padding: 80px 0 0 20px;
+      cursor: pointer;
+      background-image: none !important;
+      &::after {
+        opacity: 0;
+        transition: 1s;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);       }
+      }
+      &:hover &__title {
+        transform: translateY(0);
+        opacity: 1;
+        transition-duration: 1s;
+      }
+      &:hover &__plus {
+        transform: translateY(0);
+        opacity: 0.8;
+        transition-duration: 1s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
