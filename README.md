@@ -1,6 +1,6 @@
 # E-commerce using NextJs
 
-- ReactJs
+- NextJs
 - Redux Toolkit, Redux Saga
 - Typescript
 - Axios
