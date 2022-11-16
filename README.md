@@ -2,6 +2,7 @@
 
 - ReactJs
 - Redux Toolkit, Redux Saga
+- Typescript
 - Axios
 - Final-form
 - Payment
